@@ -39,7 +39,9 @@ git reset --head HEAD[[^][~n]]//HEAD 是指向当前的版本 HEAD^^ 表示上�
 > 工作区和版本库在还没有提交之前的回退
 ```bash
 git restore [文件]... // 丢弃工作区的改动
+git checkout -- [fileName]
 git restore --staged [文件]... //取消暂存
+git reset HEAD [fileName]
 ```
 > 版本库的概念
 
