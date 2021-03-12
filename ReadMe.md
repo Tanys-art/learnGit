@@ -89,3 +89,13 @@ git merge [分支的名字] // 使用这条命令将命令给定的分支合并�
 ```bash
 git branch -d [分支的名字] 
 ```
+
+> switch 命令
+
+使用switch 命令来代替branch的一些功能
+
+```bash
+创建+切换分支：git checkout -b <name>或者git switch -c <name>
+git switch -c [分支的名字] //创建并切换分支
+git switch [分支的名字] //切换分支
+```
