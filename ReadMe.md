@@ -106,5 +106,6 @@ $ git switch [分支的名字] //切换分支
 
 ```bash
 $ git log --graph --pretty=oneline --abbrev-commit
+$ git log --graph // 分支合并图
 $ git merge [分支的名字]
 ```
