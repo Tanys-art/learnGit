@@ -49,6 +49,19 @@ git reset HEAD [fileName]
 
 > 远程仓库
 
+远程仓库克隆出来有两种协议，https 和 ssh 协议，ssh要通过生成公钥然后在git上配置公钥，克隆不要使用```sudo```命令
 ```bash
-
+$ git remote add origin git@github.com:Tanys-art/learngit.git //origin 建立关联
+$ git push -u origin master //推送到远程仓库 参数 -u可以简化之后推送的命令
+$ git push origin master
+// 远程仓库克隆出来可通过两种协议
+$ git clone git@github.com:Tanys-art/gitskills.git // 或者使用https协议
 ```
+
+> 删除远程仓库的概念
+
+```bash
+$ git remote -v //查看远程仓库的信息
+$ git remote rm origin
+```
++ 此处的“删除”其实是解除了本地和远程的绑定关系，并不是物理上删除了远程库。远程库本身并没有任何改动。
