@@ -46,3 +46,9 @@ git reset HEAD [fileName]
 > 版本库的概念
 
 <image src="https://static.liaoxuefeng.com/files/attachments/919020037470528/0">
+
+> 远程仓库
+
+```bash
+
+```
