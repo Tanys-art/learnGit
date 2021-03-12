@@ -102,3 +102,9 @@ $ git switch [分支的名字] //切换分支
 
 > 分支的冲突问题
 
+查看简化日志之后的命令和合并分支命令
+
+```bash
+$ git log --graph --pretty=oneline --abbrev-commit
+$ git merge [分支的名字]
+```
