@@ -146,3 +146,27 @@ $ git cherry-pick 4c805e2 // 这个命令是用来复制修改的
 ```bash
 git branch -D feature // -d 是删除一个已经合并的分支，-D是删除一个还没合并的分支，也叫强行删除
 ```
+
+> 多人协作
+
+多人协作模式
+
+```bash
+
+
+    首先，可以试图用git push origin <branch-name>推送自己的修改；
+
+    如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+
+    如果合并有冲突，则解决冲突，并在本地提交；
+
+    没有冲突或者解决掉冲突后，再用git push origin <branch-name>推送就能成功！
+
+如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to <branch-name> origin/<branch-name>。
+```
+
+总结：本地创建的分支和远程的最好一致
+
+```bash
+git checkout -b branch-name origin/branch-name //这样做可以同步分支的名字
+```
