@@ -139,3 +139,10 @@ $ git stash list //查看之前保留的现存
 $ git stash apply + git stash pop == git stash pop // 用一个命令就可以
 $ git cherry-pick 4c805e2 // 这个命令是用来复制修改的
 ```
+> feature 分支
+
+我们在开发过程中，如果开发一个新的功能的话就需要我们创建一个新的分支来开发，然后如果在开发过程中这个功能要丢弃，然后要删除这个分支，这个时候就要强行删除
+
+```bash
+git branch -D feature // -d 是删除一个已经合并的分支，-D是删除一个还没合并的分支，也叫强行删除
+```
