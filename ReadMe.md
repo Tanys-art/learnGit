@@ -170,3 +170,5 @@ git branch -D feature // -d 是删除一个已经合并的分支，-D是删除�
 ```bash
 git checkout -b branch-name origin/branch-name //这样做可以同步分支的名字
 ```
+
+技巧：我们一般在开发过程中会使用dev 分支进行合作，最后合并之后拉取请求，最后合并到main 分支
