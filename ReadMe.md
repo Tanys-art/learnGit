@@ -109,3 +109,15 @@ $ git log --graph --pretty=oneline --abbrev-commit
 $ git log --graph // 分支合并图
 $ git merge [分支的名字]
 ```
+
+> 分支管理策略
+
+在多人开发中，一般不会在主分支上做操作，会建立一个dev分支，然后在分支dev上操作，然后最后合并起来如下图
+
+<image src = "https://static.liaoxuefeng.com/files/attachments/919023260793600/0"></image>
+
+在多人开发中也不会使用fist forword ,常用的命令如下
+
+```bash
+$ git merge --no-ff -m "merge with no-ff" dev // 正常的合并方式
+```
