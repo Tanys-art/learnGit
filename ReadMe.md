@@ -180,3 +180,18 @@ git checkout -b branch-name origin/branch-name //这样做可以同步分支的�
 ```bash
 git rebase
 ```
+> 标签的使用
+
+使用场景：因为commit号的id不好记忆，所以可以使用标签来代替提交号
+
+```bash
+$ git tag v0.9 commitId // 给历史版本打标签
+$ git tag // 查看历史标签
+$ git tag v1.0 // 给当前分支打标签
+$ git tag -a v0.1 -m "version 0.1 released" 1094adb
+$ git show [targetname]
+$ git tag -d v1.0 //删除标签
+$ git push origin v1.0 or git push orgin --tags //推送标签到远程库，一个或者多个
+$ git tag -d v0.9 //如果已经推送到了远程仓库 ，先删除本地
+$ git push origin :refs/tags/v0.9 //删除远程仓库的标签
+```
