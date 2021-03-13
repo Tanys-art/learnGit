@@ -121,3 +121,21 @@ $ git merge [分支的名字]
 ```bash
 $ git merge --no-ff -m "merge with no-ff" dev // 正常的合并方式
 ```
+
+> bug 的修复
+
+场景：当我们在dev分支上的时候做了一些修改，然后发现main 分支上面还有bug,然后我的dev也还没有提交的时候，这个时候dev也还没完成不能提交，这个时候要保留dev的现场，然后，建立一个修复bug的分支，然后修复bug后再，把修改的现场再提交上去
+
+```bash
+$ git stash //保留现场
+$ git checkout main //切换到bug分支
+$ git checkout -b issue-101 //建立修复bug的分支并切换
+$ git add [fileName]
+$ git commit -m "" //提交
+$ git switch [分支名字] 
+$ git merge --no-ff -m "描述" [分支名字] // 合并之后发现之前做的修改消失
+$ git switch dev // 之前做的修改消失
+$ git stash list //查看之前保留的现存
+$ git stash apply + git stash pop == git stash pop // 用一个命令就可以
+$ git cherry-pick 4c805e2 // 这个命令是用来复制修改的
+```
