@@ -195,3 +195,13 @@ $ git push origin v1.0 or git push orgin --tags //推送标签到远程库，一
 $ git tag -d v0.9 //如果已经推送到了远程仓库 ，先删除本地
 $ git push origin :refs/tags/v0.9 //删除远程仓库的标签
 ```
+
+> github 和 gitee 同时使用
+
+如果同时使用的话就把origin改成不同的名字就可了
+
+```bash
+$ git remote add gitee git@gitee.com:liaoxuefeng/learngit.git
+$ git remote add github git@gitee.com:liaoxuefeng/learngit.git
+$ git remote -v // 查看远程库的信息
+```
